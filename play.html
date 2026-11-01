@@ -7,8 +7,8 @@
     <meta name="description" content="Play Modern Jetstrike 2D online. Fast-paced 2D tactical combat with jet boots flight, projectile ballistics, 3-tier arena, and intense CTF team matches." />
     <meta name="theme-color" content="#060911" />
     <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
-    <script type="module" crossorigin src="./assets/play-CVj9JgCm.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/style-Bw9QqUXB.css">
+    <script type="module" crossorigin src="./assets/play-yaVjNLS6.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/style-fzPiS7ZG.css">
   </head>
   <body class="arena-body">
     <!-- Streamlined Header for Pure Game Arena -->
@@ -34,22 +34,78 @@
         <!-- Main Game Canvas -->
         <canvas id="game-canvas"></canvas>
 
-        <!-- On-Screen Mobile Touch Controls -->
+        <!-- On-Screen Mobile Touch Controls (Call of Duty Mobile Dual-Stick Style) -->
         <div id="touch-controls" class="touch-overlay" style="display: none;">
-          <div id="touch-left-zone" class="touch-zone">
-            <div id="touch-stick-base" class="stick-base">
-              <div id="touch-stick-knob" class="stick-knob"></div>
+          <!-- Left Thumbstick: Movement (Run, Jump, Drop/Crouch) -->
+          <div id="touch-left-zone" class="touch-zone touch-move-zone">
+            <div id="touch-stick-base" class="stick-base move-stick-base">
+              <div class="stick-ring-guide">
+                <span class="guide-dir guide-up">▲</span>
+                <span class="guide-dir guide-down">▼</span>
+                <span class="guide-dir guide-left">◀</span>
+                <span class="guide-dir guide-right">▶</span>
+              </div>
+              <div id="touch-stick-knob" class="stick-knob move-stick-knob">
+                <div class="knob-dot"></div>
+              </div>
             </div>
           </div>
 
-          <div id="touch-right-zone" class="touch-zone">
-            <div class="touch-btn-cluster">
-              <button id="touch-btn-jet" class="t-btn t-jet" title="Jet Boots">🚀</button>
-              <button id="touch-btn-grenade" class="t-btn t-grenade" title="Grenade">💣</button>
-              <button id="touch-btn-reload" class="t-btn t-reload" title="Reload">🔄</button>
-              <button id="touch-btn-weapon" class="t-btn t-weapon" title="Next Weapon">🔫</button>
-              <button id="touch-btn-fire" class="t-btn t-fire" title="Fire Weapon">🎯 FIRE</button>
+          <!-- Right Zone: Dual-Stick 360° Aim & Fire Joystick + Surrounding Tactical Buttons -->
+          <div id="touch-right-zone" class="touch-zone touch-aim-zone">
+            <!-- 360° Aim & Fire Joystick -->
+            <div id="touch-fire-base" class="stick-base fire-stick-base">
+              <div class="fire-aim-indicator" id="fire-aim-indicator"></div>
+              <div id="touch-fire-knob" class="stick-knob fire-stick-knob">
+                <span class="fire-knob-text">🎯 FIRE</span>
+              </div>
             </div>
+
+            <!-- Surrounding Action Cluster (Call of Duty Mobile layout) -->
+            <div class="touch-btn-cluster">
+              <button id="touch-btn-jet" class="t-btn t-jet" title="Jet Boost (Fly / Somersault)">
+                <span class="t-icon">🚀</span>
+                <span class="t-label">BOOST</span>
+              </button>
+              <button id="touch-btn-jump" class="t-btn t-jump" title="Jump / Vault">
+                <span class="t-icon">⬆️</span>
+              </button>
+              <button id="touch-btn-prone" class="t-btn t-prone" title="Prone / Crouch">
+                <span class="t-icon">🧎</span>
+              </button>
+              <button id="touch-btn-grenade" class="t-btn t-grenade" title="Grenade (Hold to charge)">
+                <span class="t-icon">💣</span>
+              </button>
+              <button id="touch-btn-reload" class="t-btn t-reload" title="Reload Weapon">
+                <span class="t-icon">🔄</span>
+              </button>
+              <button id="touch-btn-weapon" class="t-btn t-weapon" title="Switch Weapon">
+                <span class="t-icon">🔀</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mobile Landscape Orientation Enforcer Overlay -->
+        <div id="rotate-prompt" class="rotate-prompt-overlay" style="display: none;">
+          <div class="rotate-card glass-panel">
+            <div class="rotate-phone-anim">
+              <svg class="phone-svg" viewBox="0 0 80 120" width="70" height="105">
+                <rect x="5" y="5" width="70" height="110" rx="14" ry="14" fill="#0d1527" stroke="#00f5d4" stroke-width="3" />
+                <line x1="28" y1="12" x2="52" y2="12" stroke="#4895ef" stroke-width="2.5" stroke-linecap="round" />
+                <circle cx="40" cy="104" r="4.5" fill="#00f5d4" />
+                <rect x="12" y="20" width="56" height="74" rx="4" ry="4" fill="rgba(0, 245, 212, 0.08)" stroke="rgba(0, 245, 212, 0.25)" stroke-width="1.5" />
+                <circle cx="40" cy="57" r="14" fill="none" stroke="#ff0054" stroke-width="2" stroke-dasharray="3,3" />
+                <circle cx="40" cy="57" r="3" fill="#ff0054" />
+              </svg>
+              <div class="rotate-arrow-indicator">🔄</div>
+            </div>
+            <h2 class="rotate-title">סובב את המכשיר למצב מאוזן</h2>
+            <div class="rotate-sub">ROTATE DEVICE TO LANDSCAPE</div>
+            <p class="rotate-note">לשליטה טקטית אופטימלית ב-Dual-Stick 360° ותצוגת קרב רחבה</p>
+            <button id="btn-force-landscape" class="rotate-action-btn">
+              <span>⛶ מעבר למסך מלא מאוזן</span>
+            </button>
           </div>
         </div>
 
