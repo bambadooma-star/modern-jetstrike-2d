@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 120" width="100%" height="100%" fill="none">
+  <defs>
+    <!-- Background glow & gradients -->
+    <linearGradient id="jetGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f5d4" />
+      <stop offset="60%" stop-color="#0ea5e9" />
+      <stop offset="100%" stop-color="#3b82f6" />
+    </linearGradient>
+    <linearGradient id="thrustGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ff0054" />
+      <stop offset="50%" stop-color="#ffbe0b" />
+      <stop offset="100%" stop-color="transparent" />
+    </linearGradient>
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="40%" stop-color="#f8fafc" />
+      <stop offset="100%" stop-color="#00f5d4" />
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f5d4" />
+      <stop offset="100%" stop-color="#38bdf8" />
+    </linearGradient>
+    <linearGradient id="badgeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff0054" />
+      <stop offset="100%" stop-color="#ff5400" />
+    </linearGradient>
+
+    <!-- Filters for cyber glow -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3.5" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Left Jetstrike Emblem (Fighter + Jet Flames + Target Crosshair) -->
+  <g transform="translate(10, 8)">
+    <!-- Targeting Crosshair Ring -->
+    <circle cx="52" cy="52" r="44" stroke="#00f5d4" stroke-width="1.5" stroke-dasharray="8 4" opacity="0.4" />
+    <circle cx="52" cy="52" r="32" stroke="#38bdf8" stroke-width="1" opacity="0.5" />
+    <line x1="52" y1="2" x2="52" y2="18" stroke="#00f5d4" stroke-width="2" />
+    <line x1="52" y1="86" x2="52" y2="102" stroke="#00f5d4" stroke-width="2" />
+    <line x1="2" y1="52" x2="18" y2="52" stroke="#00f5d4" stroke-width="2" />
+    <line x1="86" y1="52" x2="102" y2="52" stroke="#00f5d4" stroke-width="2" />
+
+    <!-- Jet Thrust Afterburner Flames (Dual Exhaust) -->
+    <path d="M42 76 L46 102 L50 76 Z" fill="url(#thrustGrad)" filter="url(#glow)" />
+    <path d="M54 76 L58 102 L62 76 Z" fill="url(#thrustGrad)" filter="url(#glow)" />
+    <circle cx="46" cy="84" r="3" fill="#ffbe0b" filter="url(#glow)" />
+    <circle cx="58" cy="84" r="3" fill="#ffbe0b" filter="url(#glow)" />
+
+    <!-- Supersonic Fighter Stealth Body -->
+    <!-- Wings & Hull -->
+    <path d="M52 14 L62 42 L94 62 L94 68 L66 65 L66 78 L74 86 L74 89 L52 83 L30 89 L30 86 L38 78 L38 65 L10 68 L10 62 L42 42 Z" fill="#0f172a" stroke="url(#jetGrad)" stroke-width="2.5" stroke-linejoin="round" />
+    <!-- Wing Contours & Canards -->
+    <path d="M52 18 L60 40 L52 64 L44 40 Z" fill="#1e293b" stroke="#00f5d4" stroke-width="1.2" />
+    <polygon points="52,22 55,34 52,38 49,34" fill="#00f5d4" opacity="0.9" />
+
+    <!-- Speed Streaks -->
+    <line x1="6" y1="46" x2="22" y2="46" stroke="#00f5d4" stroke-width="1" opacity="0.5" />
+    <line x1="82" y1="46" x2="98" y2="46" stroke="#00f5d4" stroke-width="1" opacity="0.5" />
+  </g>
+
+  <!-- Typography Right Side -->
+  <g transform="translate(126, 12)">
+    <!-- Sub-label / Tagline -->
+    <text x="2" y="24" font-family="'Chakra Petch', 'Arial Black', sans-serif" font-size="12" font-weight="700" fill="#94a3b8" letter-spacing="4.5">TACTICAL AERIAL COMBAT</text>
+
+    <!-- Main Wordmark: MODERN JETSTRIKE -->
+    <text x="0" y="66" font-family="'Chakra Petch', 'Rubik', 'Arial Black', sans-serif" font-size="42" font-weight="900" fill="url(#textGrad)" letter-spacing="2">MODERN <tspan fill="url(#accentGrad)" filter="url(#glow)">JETSTRIKE</tspan></text>
+
+    <!-- Tactical 2D Badge -->
+    <g transform="translate(328, 40)">
+      <polygon points="0,0 48,0 42,28 -6,28" fill="url(#badgeGrad)" />
+      <text x="10" y="21" font-family="'Chakra Petch', 'Arial Black', sans-serif" font-size="18" font-weight="900" fill="#ffffff" letter-spacing="1">2D</text>
+    </g>
+
+    <!-- Technical spec line -->
+    <line x1="2" y1="84" x2="380" y2="84" stroke="rgba(255,255,255,0.12)" stroke-width="1" />
+    <circle cx="2" cy="84" r="2.5" fill="#00f5d4" />
+    <circle cx="380" cy="84" r="2.5" fill="#ff0054" />
+    <text x="14" y="96" font-family="'Rubik', 'Segoe UI', sans-serif" font-size="10" font-weight="600" fill="#64748b" letter-spacing="1.5">REAL BALLISTICS • JET BOOTS 360° • CTF BATTLEFIELD</text>
+  </g>
+</svg>

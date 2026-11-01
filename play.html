@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>MODERN JETSTRIKE 2D — Live Combat Arena</title>
+    <meta name="description" content="Play Modern Jetstrike 2D online. Fast-paced 2D tactical combat with jet boots flight, projectile ballistics, 3-tier arena, and intense CTF team matches." />
+    <meta name="theme-color" content="#060911" />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <script type="module" crossorigin src="./assets/play-CVj9JgCm.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/style-Bw9QqUXB.css">
+  </head>
+  <body class="arena-body">
+    <!-- Streamlined Header for Pure Game Arena -->
+    <header class="site-header game-arena-header">
+      <div class="header-container">
+        <a href="./index.html" class="brand-link" title="Return to Home & Portal">
+          <img src="./modern-jetstrike-logo.svg" alt="Modern Jetstrike 2D" class="header-logo-img" />
+        </a>
+
+        <div class="header-actions">
+          <a href="./index.html" class="header-pill home-link-pill" title="Return to Home / Marketing Portal">
+            <span>🏠 HOME</span>
+          </a>
+          <button id="mute-btn" class="header-pill" title="Mute/Unmute Audio">🔊 SOUND ON</button>
+          <button id="fullscreen-btn" class="header-pill" title="Toggle Fullscreen">⛶ FULLSCREEN</button>
+          <button id="main-menu-btn" class="header-pill danger" title="Pause / Open Match Menu" style="display: none;">⚙️ MENU [ESC]</button>
+        </div>
+      </div>
+    </header>
+
+    <div id="app" class="game-app-container">
+      <section id="battle-arena" class="arena-section standalone-arena">
+        <!-- Main Game Canvas -->
+        <canvas id="game-canvas"></canvas>
+
+        <!-- On-Screen Mobile Touch Controls -->
+        <div id="touch-controls" class="touch-overlay" style="display: none;">
+          <div id="touch-left-zone" class="touch-zone">
+            <div id="touch-stick-base" class="stick-base">
+              <div id="touch-stick-knob" class="stick-knob"></div>
+            </div>
+          </div>
+
+          <div id="touch-right-zone" class="touch-zone">
+            <div class="touch-btn-cluster">
+              <button id="touch-btn-jet" class="t-btn t-jet" title="Jet Boots">🚀</button>
+              <button id="touch-btn-grenade" class="t-btn t-grenade" title="Grenade">💣</button>
+              <button id="touch-btn-reload" class="t-btn t-reload" title="Reload">🔄</button>
+              <button id="touch-btn-weapon" class="t-btn t-weapon" title="Next Weapon">🔫</button>
+              <button id="touch-btn-fire" class="t-btn t-fire" title="Fire Weapon">🎯 FIRE</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Main Menu & Match Setup Overlay (Compact Zero-Scroll Tactical War Room) -->
+        <div id="menu-overlay" class="overlay-container">
+          <div class="menu-card glass-panel compact-warroom">
+            <!-- Header Bar -->
+            <div class="warroom-header">
+              <div class="brand-badge-box">
+                <span class="live-status-dot"></span>
+                <h1 class="warroom-title">MODERN JETSTRIKE <span>2D</span></h1>
+                <span class="warroom-tag">TACTICAL COMBAT</span>
+              </div>
+              <div id="player-profile-badge" class="profile-pill-compact">
+                <span id="profile-rank-tag">LVL 1 RECRUIT</span>
+                <span id="profile-credits-tag">0 CREDITS</span>
+              </div>
+            </div>
+
+            <!-- 3-Column Tactical Setup Grid -->
+            <div class="warroom-grid">
+              <!-- Column 1: Match Settings -->
+              <div class="warroom-col">
+                <div class="setup-group">
+                  <label class="group-title">1. OPERATING MODE (מצב הפעלה):</label>
+                  <div class="button-group mode-group-compact">
+                    <button class="menu-btn mode-btn active" data-mode="pvb">
+                      <span class="btn-top">🎮 PLAYER VS BOTS</span>
+                      <span class="btn-sub">Pilot Commander</span>
+                    </button>
+                    <button class="menu-btn mode-btn cvc-highlight" data-mode="cvc">
+                      <span class="btn-top">🤖 COMPUTER VS COMPUTER</span>
+                      <span class="btn-sub">AI vs AI Simulation</span>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="setup-group">
+                  <label class="group-title">2. SQUAD SIZE (PER TEAM):</label>
+                  <div class="button-group grid-4-pills">
+                    <button class="menu-btn size-btn" data-size="1v1">1 VS 1</button>
+                    <button class="menu-btn size-btn active" data-size="2v2">2 VS 2</button>
+                    <button class="menu-btn size-btn" data-size="3v3">3 VS 3</button>
+                    <button class="menu-btn size-btn" data-size="4v4">4 VS 4</button>
+                  </div>
+                </div>
+
+                <div class="setup-group">
+                  <label class="group-title">3. BOT INTELLIGENCE:</label>
+                  <div class="button-group grid-3-pills">
+                    <button class="menu-btn diff-btn" data-diff="easy">CADET</button>
+                    <button class="menu-btn diff-btn active" data-diff="medium">VETERAN</button>
+                    <button class="menu-btn diff-btn" data-diff="hard">HARDCORE</button>
+                  </div>
+                </div>
+
+                <div class="setup-group audio-compact-group">
+                  <label class="group-title">4. AUDIO CONTROLS (שמע):</label>
+                  <div class="vol-row-compact">
+                    <div class="volume-slider-compact">
+                      <span>SFX: <b id="master-volume-val">80%</b></span>
+                      <input type="range" id="master-volume-slider" min="0" max="1" step="0.05" value="0.8" class="vol-slider" />
+                    </div>
+                    <div class="volume-slider-compact">
+                      <span>VOICE: <b id="voice-volume-val">90%</b></span>
+                      <input type="range" id="voice-volume-slider" min="0" max="1" step="0.05" value="0.9" class="vol-slider" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Column 2: Tactical Map Selector (6 Living Maps) -->
+              <div class="warroom-col">
+                <div class="setup-group">
+                  <label class="group-title">5. TACTICAL ARENA (בחר 1 מתוך 6 מפות):</label>
+                  <div class="map-selector-grid">
+                    <button class="map-card-pill active" data-map="citadel">
+                      <span class="map-icon">🏰</span>
+                      <div class="map-text">
+                        <strong>VALKYRIE CITADEL</strong>
+                        <small>Subterranean Fortress</small>
+                      </div>
+                    </button>
+                    <button class="map-card-pill" data-map="jungle">
+                      <span class="map-icon">🌴</span>
+                      <div class="map-text">
+                        <strong>VERDANT JUNGLE</strong>
+                        <small>Lush Canopy & Ruins</small>
+                      </div>
+                    </button>
+                    <button class="map-card-pill" data-map="desert">
+                      <span class="map-icon">🏜️</span>
+                      <div class="map-text">
+                        <strong>SANDSTONE CANYON</strong>
+                        <small>Sun-Baked Terracotta</small>
+                      </div>
+                    </button>
+                    <button class="map-card-pill" data-map="arctic">
+                      <span class="map-icon">❄️</span>
+                      <div class="map-text">
+                        <strong>ARCTIC BASTION</strong>
+                        <small>Glacial Frost Caves</small>
+                      </div>
+                    </button>
+                    <button class="map-card-pill" data-map="docks">
+                      <span class="map-icon">⚓</span>
+                      <div class="map-text">
+                        <strong>HARBOR DOCKS</strong>
+                        <small>Industrial Rainy Port</small>
+                      </div>
+                    </button>
+                    <button class="map-card-pill" data-map="neon">
+                      <span class="map-icon">⚡</span>
+                      <div class="map-text">
+                        <strong>NEON TERMINAL</strong>
+                        <small>Cyber Metro Concourse</small>
+                      </div>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Column 3: Weapons Arsenal & Controls -->
+              <div class="warroom-col">
+                <div class="setup-group">
+                  <label class="group-title">6. WEAPON LOADOUT (SWITCH [1-6]):</label>
+                  <div class="weapons-arsenal-compact">
+                    <div class="weapon-compact-card active" data-weapon="assault">
+                      <span class="w-badge">1</span>
+                      <span class="w-name">AR-74 Valkyrie</span>
+                      <span class="default-tag">✓ DEFAULT</span>
+                    </div>
+                    <div class="weapon-compact-card" data-weapon="shotgun">
+                      <span class="w-badge">2</span>
+                      <span class="w-name">SPAS-14 Breacher</span>
+                      <span class="default-tag">SELECT</span>
+                    </div>
+                    <div class="weapon-compact-card" data-weapon="sniper">
+                      <span class="w-badge">3</span>
+                      <span class="w-name">.50 Cal Hawk</span>
+                      <span class="default-tag">SELECT</span>
+                    </div>
+                    <div class="weapon-compact-card" data-weapon="rocket">
+                      <span class="w-badge">4</span>
+                      <span class="w-name">RPG-7 Hydra</span>
+                      <span class="default-tag">SELECT</span>
+                    </div>
+                    <div class="weapon-compact-card" data-weapon="smg">
+                      <span class="w-badge">5</span>
+                      <span class="w-name">MP-9 Stinger</span>
+                      <span class="default-tag">SELECT</span>
+                    </div>
+                    <div class="weapon-compact-card" data-weapon="flamethrower">
+                      <span class="w-badge">6</span>
+                      <span class="w-name">Ignis-X Vulcan (Fire)</span>
+                      <span class="default-tag">SELECT</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="setup-group">
+                  <label class="group-title">CONTROLS GUIDE:</label>
+                  <div class="controls-ticker-compact">
+                    <span><kbd>WASD</kbd> Move/Jump</span>
+                    <span><kbd>S+W</kbd> Drop</span>
+                    <span><kbd>X/S</kbd> Prone</span>
+                    <span><kbd>SHIFT</kbd> Jet</span>
+                    <span><kbd>L-CLICK</kbd> Fire</span>
+                    <span><kbd>E</kbd> Frag</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Footer Dock: Prominent Always-Visible CTA -->
+            <div class="warroom-footer">
+              <div class="warroom-status">
+                <span class="status-indicator"></span>
+                <span>SYSTEM READY • CTF PROTOCOL ENGAGED</span>
+              </div>
+              <button id="start-btn" class="cta-button warroom-launch-btn pulse-button">
+                <span class="btn-text">DEPLOY TO COMBAT [ENTER] ➔</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Main Menu Return Confirmation / Pause Modal -->
+        <div id="leave-modal" class="overlay-container" style="display: none;">
+          <div class="modal-card glass-panel warning-card">
+            <div class="badge-tag warning">MATCH PAUSED</div>
+            <h2 class="modal-title text-warning">RETURN TO MAIN MENU?</h2>
+            <p class="modal-subtitle">The match is paused. Returning to main menu will discard current match progress and K/D stats.</p>
+
+            <div class="modal-actions">
+              <button id="confirm-leave-btn" class="cta-button danger">
+                <span class="btn-text">YES, RETURN TO MENU</span>
+              </button>
+              <button id="cancel-leave-btn" class="cta-button secondary">
+                <span class="btn-text">RESUME BATTLE [ESC]</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Game Over Modal -->
+        <div id="game-over-modal" class="overlay-container" style="display: none;">
+          <div class="modal-card glass-panel">
+            <h2 id="game-over-title" class="modal-title">VICTORY</h2>
+            <p id="game-over-subtitle" class="modal-subtitle">The Blue team captured 5 flags and claimed victory!</p>
+
+            <div id="game-over-score" class="score-display"></div>
+            <div id="game-over-rewards"></div>
+            <div id="game-over-stats" class="stats-summary"></div>
+
+            <div class="modal-actions">
+              <button id="play-again-btn" class="cta-button">
+                <span class="btn-text">PLAY AGAIN</span>
+              </button>
+              <button id="game-over-menu-btn" class="cta-button secondary">
+                <span class="btn-text">MAIN MENU</span>
+              </button>
+              <a href="./index.html" class="cta-button tertiary">
+                <span class="btn-text">🏠 HOME PORTAL</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Main Game Script -->
+  </body>
+</html>
