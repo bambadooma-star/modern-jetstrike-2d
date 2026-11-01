@@ -3,816 +3,604 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <title>Modern Jetstrike 2D | Fast-Paced Browser Tactical Shooter</title>
-    <meta name="description" content="Modern Jetstrike 2D: Fast-paced competitive browser tactical shooter inspired by Soldat. 360° jetpack flight, swept ballistics, dynamic grenade physics, and squad CTF warfare with zero install." />
-    <link rel="canonical" href="https://bambadooma-star.github.io/modern-jetstrike-2d/" />
-
-    <!-- Open Graph Protocol (Facebook, Discord, LinkedIn) -->
-    <meta property="og:site_name" content="Modern Jetstrike 2D" />
-    <meta property="og:title" content="Modern Jetstrike 2D | Fast-Paced Browser Tactical Shooter" />
-    <meta property="og:description" content="Zero-lag 60 FPS tactical 2D aerial combat directly in your browser. Master 360° jet boots, swept raycast ballistics, and squad Capture-the-Flag." />
-    <meta property="og:image" content="https://bambadooma-star.github.io/modern-jetstrike-2d/modern-jetstrike-logo.svg" />
-    <meta property="og:url" content="https://bambadooma-star.github.io/modern-jetstrike-2d/" />
-    <meta property="og:type" content="website" />
-
-    <!-- Twitter Cards -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Modern Jetstrike 2D | Fast-Paced Browser Tactical Shooter" />
-    <meta name="twitter:description" content="Experience high-octane 2D aerial combat inspired by Soldat. Play instantly in browser with zero download." />
-    <meta name="twitter:image" content="https://bambadooma-star.github.io/modern-jetstrike-2d/modern-jetstrike-logo.svg" />
-
+    <title>MODERN JETSTRIKE 2D — Live Combat Arena</title>
+    <meta name="description" content="Play Modern Jetstrike 2D online. Fast-paced 2D tactical combat with jet boots flight, projectile ballistics, 3-tier arena, and intense CTF team matches." />
     <meta name="theme-color" content="#060911" />
     <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
-
-    <!-- Structured Data (JSON-LD) for Search Engines -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": ["SoftwareApplication", "VideoGame"],
-        "name": "Modern Jetstrike 2D",
-        "description": "Fast-paced browser tactical 2D shooter inspired by Soldat. Features 360° jetpack combat, swept raycast ballistics, and squad Capture-The-Flag.",
-        "applicationCategory": "Game",
-        "operatingSystem": "Any Web Browser (HTML5, Canvas, Web Audio)",
-        "genre": ["Action", "Tactical Shooter", "Platformer", "CTF"],
-        "playMode": ["SinglePlayer", "MultiPlayer"],
-        "inLanguage": "en",
-        "url": "https://bambadooma-star.github.io/modern-jetstrike-2d/",
-        "author": {
-          "@type": "Organization",
-          "name": "Modern Jetstrike Team"
-        },
-        "offers": {
-          "@type": "Offer",
-          "price": "0",
-          "priceCurrency": "USD",
-          "availability": "https://schema.org/InStock"
-        }
-      }
-    </script>
-    <link rel="stylesheet" crossorigin href="./assets/style-BB7yL2Ba.css">
+    <script type="module" crossorigin src="./assets/main-mjuyzgRI.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/style-ZzqsInnn.css">
   </head>
-  <body class="portal-body">
-    <!-- Global Sticky Navigation Bar -->
-    <header class="site-header">
+  <body class="arena-body">
+    <!-- Streamlined Header for Pure Game Arena -->
+    <header class="site-header game-arena-header">
       <div class="header-container">
-        <a href="./index.html" class="brand-link" title="Modern Jetstrike 2D Official Portal">
-          <img src="./modern-jetstrike-logo.svg" alt="Modern Jetstrike 2D" class="header-logo-img" />
-        </a>
-
-        <nav class="site-nav">
-          <a href="#physics" class="nav-link">PHYSICS</a>
-          <a href="#arsenal" class="nav-link">ARSENAL</a>
-          <a href="#play-now" class="nav-link">INSTANT PLAY</a>
-          <a href="#controls" class="nav-link">CONTROLS</a>
-        </nav>
+        <div class="brand-link" id="brand-logo-btn" role="button" title="Open Match Menu" style="cursor: pointer;">
+          <img src="./modern-jetstrike-logo.svg" alt="Modern Jetstrike" class="header-logo-img" />
+        </div>
 
         <div class="header-actions">
-          <a href="./play.html" class="play-now-header-btn" title="Launch Dedicated Game Arena">
-            <span class="pulse-dot"></span>
-            <span>PLAY FREE</span>
-          </a>
-          <a href="https://github.com/bambadooma-star/modern-jetstrike-2d" target="_blank" rel="noopener noreferrer" class="github-pill" title="GitHub Project Repository">
-            <svg class="gh-icon" viewBox="0 0 16 16" width="14" height="14" fill="currentColor">
-              <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
-            </svg>
-            <span>GITHUB</span>
-          </a>
+          <button id="mute-btn" class="header-pill" title="Mute/Unmute Audio">SOUND ON</button>
+          <button id="fullscreen-btn" class="header-pill" title="Toggle Fullscreen">FULLSCREEN</button>
+          <button id="self-destruct-btn" class="header-pill danger" title="Self-Destruct / Force Respawn [K] (15s Penalty)" style="display: none; color: #ff0054; border-color: rgba(255, 0, 84, 0.45); background: rgba(255, 0, 84, 0.12);">RESPAWN [K]</button>
+          <button id="main-menu-btn" class="header-pill danger" title="Pause / Open Match Menu" style="display: none;">MENU [ESC]</button>
         </div>
       </div>
     </header>
 
-    <main id="app">
-      <!-- HERO MARKETING SECTION (CRO & Visual Proof) -->
-      <section class="portal-hero">
-        <div class="hero-content-wrapper">
-          <div class="hero-left">
-            <div class="badge-tag">
-              <span class="live-pulse-glow"></span>
-              <span>TACTICAL 2D AERIAL COMBAT • ZERO INSTALL</span>
+    <div id="app" class="game-app-container">
+      <section id="battle-arena" class="arena-section standalone-arena">
+        <!-- Main Game Canvas -->
+        <canvas id="game-canvas"></canvas>
+
+        <!-- On-Screen Mobile Touch Controls (Call of Duty Mobile Dual-Stick Style) -->
+        <div id="touch-controls" class="touch-overlay" style="display: none;">
+          <!-- Left Thumbstick: Movement (Run, Jump, Drop/Crouch) -->
+          <div id="touch-left-zone" class="touch-zone touch-move-zone">
+            <div id="touch-stick-base" class="stick-base move-stick-base">
+              <div class="stick-ring-guide">
+                <span class="guide-dir guide-up">▲</span>
+                <span class="guide-dir guide-down">▼</span>
+                <span class="guide-dir guide-left">◀</span>
+                <span class="guide-dir guide-right">▶</span>
+              </div>
+              <div id="touch-stick-knob" class="stick-knob move-stick-knob">
+                <div class="knob-dot"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Zone: Dual-Stick 360° Aim & Fire Joystick + Surrounding Tactical Buttons -->
+          <div id="touch-right-zone" class="touch-zone touch-aim-zone">
+            <!-- 360° Aim & Fire Joystick -->
+            <div id="touch-fire-base" class="stick-base fire-stick-base">
+              <div class="fire-aim-indicator" id="fire-aim-indicator"></div>
+              <div id="touch-fire-knob" class="stick-knob fire-stick-knob">
+                <span class="fire-knob-text">🎯 FIRE</span>
+              </div>
             </div>
 
-            <h1 class="hero-main-title">
-              Modern Jetstrike 2D <span class="title-sub-text">| Fast-Paced Browser Tactical Shooter</span>
-            </h1>
+            <!-- Surrounding Action Cluster (Call of Duty Mobile layout) -->
+            <div class="touch-btn-cluster">
+              <button id="touch-btn-jet" class="t-btn t-jet" title="Jet Boost (Fly / Somersault)">
+                <span class="t-icon">🚀</span>
+                <span class="t-label">BOOST</span>
+              </button>
+              <button id="touch-btn-jump" class="t-btn t-jump" title="Jump / Vault">
+                <span class="t-icon">⬆️</span>
+              </button>
+              <button id="touch-btn-prone" class="t-btn t-prone" title="Prone / Crouch">
+                <span class="t-icon">🧎</span>
+              </button>
+              <button id="touch-btn-grenade" class="t-btn t-grenade" title="Grenade (Hold to charge)">
+                <span class="t-icon">💣</span>
+              </button>
+              <button id="touch-btn-reload" class="t-btn t-reload" title="Reload Weapon">
+                <span class="t-icon">🔄</span>
+              </button>
+              <button id="touch-btn-weapon" class="t-btn t-weapon" title="Switch Weapon">
+                <span class="t-icon">🔀</span>
+              </button>
+            </div>
+          </div>
+        </div>
 
-            <p class="hero-subheading">
-              Experience adrenaline-fueled 2D tactical aerial combat directly in your browser with zero install and zero lag at rock-solid 60 FPS. Master 360° jetpack flight, ricochet ballistics, and high-stakes squad Capture-The-Flag battles across living subterranean arenas.
-            </p>
+        <!-- Mobile Landscape Orientation Enforcer Overlay -->
+        <div id="rotate-prompt" class="rotate-prompt-overlay" style="display: none;">
+          <div class="rotate-card glass-panel">
+            <div class="rotate-phone-anim">
+              <svg class="phone-svg" viewBox="0 0 80 120" width="70" height="105">
+                <rect x="5" y="5" width="70" height="110" rx="14" ry="14" fill="#0d1527" stroke="#00f5d4" stroke-width="3" />
+                <line x1="28" y1="12" x2="52" y2="12" stroke="#4895ef" stroke-width="2.5" stroke-linecap="round" />
+                <circle cx="40" cy="104" r="4.5" fill="#00f5d4" />
+                <rect x="12" y="20" width="56" height="74" rx="4" ry="4" fill="rgba(0, 245, 212, 0.08)" stroke="rgba(0, 245, 212, 0.25)" stroke-width="1.5" />
+                <circle cx="40" cy="57" r="14" fill="none" stroke="#ff0054" stroke-width="2" stroke-dasharray="3,3" />
+                <circle cx="40" cy="57" r="3" fill="#ff0054" />
+              </svg>
+              <div class="rotate-arrow-indicator">🔄</div>
+            </div>
+            <h2 class="rotate-title">ROTATE DEVICE TO LANDSCAPE</h2>
+            <div class="rotate-sub">TACTICAL HORIZONTAL VIEWPORT</div>
+            <p class="rotate-note">Required for optimal 360° Dual-Stick mobile combat and wide arena visibility.</p>
+            <button id="btn-force-landscape" class="rotate-action-btn">
+              <span>⛶ ENTER FULLSCREEN LANDSCAPE</span>
+            </button>
+          </div>
+        </div>
 
-            <div class="hero-cta-group">
-              <a href="./play.html" class="hero-play-cta" title="Launch Modern Jetstrike 2D directly in your browser">
-                <span>PLAY FREE IN BROWSER</span>
+        <!-- Main Menu & Match Setup Overlay (Sleek 2-Column Tactical War Room) -->
+        <div id="menu-overlay" class="overlay-container">
+          <div class="menu-card glass-panel lobby-modular-warroom">
+            <!-- Header Bar with Quick Action Utilities -->
+            <div class="warroom-header">
+              <div class="brand-badge-box">
+                <span class="live-status-dot"></span>
+                <h1 class="warroom-title">MODERN <span>JETSTRIKE</span></h1>
+              </div>
+
+              <!-- Top Right Utilities (Callsign Nickname, Profile, Controls, Settings) -->
+              <div class="warroom-top-toolbar">
+                <div class="pilot-callsign-box" title="Click to customize combat callsign">
+                  <span class="callsign-label">CALLSIGN:</span>
+                  <input type="text" id="player-nickname-input" class="callsign-input" maxlength="14" value="Valkyrie-1" placeholder="Callsign" />
+                </div>
+                <div id="player-profile-badge" class="profile-pill-compact">
+                  <span id="profile-rank-tag">RECRUIT</span>
+                  <span id="profile-credits-tag">0 CR</span>
+                </div>
+                <button id="open-controls-btn" class="toolbar-pill" type="button" title="View Combat Controls">
+                  <span class="pill-icon">⌨</span>
+                  <span>CONTROLS</span>
+                </button>
+                <button id="open-settings-btn" class="toolbar-pill" type="button" title="Audio & System Preferences">
+                  <span class="pill-icon">⚙</span>
+                  <span>SETTINGS</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- 2-Column Modular Split -->
+            <div class="lobby-split-grid">
+              <!-- Left Panel: Match Rules & Tactical Parameters -->
+              <div class="lobby-col lobby-rules-col">
+                <div class="lobby-group">
+                  <label class="group-label">OPERATING MODE</label>
+                  <div class="button-group mode-pill-group">
+                    <button class="menu-btn mode-btn active" data-mode="pvb">
+                      <span class="btn-primary-text">PLAYER VS BOTS</span>
+                      <span class="btn-sub-label">Pilot Commander (Blue)</span>
+                    </button>
+                    <button class="menu-btn mode-btn cvc-highlight" data-mode="cvc">
+                      <span class="btn-primary-text">AI SIMULATION</span>
+                      <span class="btn-sub-label">Spectator Diagnostics</span>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="lobby-group">
+                  <label class="group-label">SQUAD COMPOSITION</label>
+                  <div class="button-group grid-4-pills">
+                    <button class="menu-btn size-btn" data-size="1v1">1 VS 1</button>
+                    <button class="menu-btn size-btn active" data-size="2v2">2 VS 2</button>
+                    <button class="menu-btn size-btn" data-size="3v3">3 VS 3</button>
+                    <button class="menu-btn size-btn" data-size="4v4">4 VS 4</button>
+                  </div>
+                </div>
+
+                <div class="lobby-group">
+                  <label class="group-label">ALLIED AI SKILL (TEAMMATES)</label>
+                  <div class="button-group grid-4-pills">
+                    <button class="menu-btn ally-diff-btn" data-diff="easy">CADET</button>
+                    <button class="menu-btn ally-diff-btn active" data-diff="medium">VETERAN</button>
+                    <button class="menu-btn ally-diff-btn" data-diff="hard">HARDCORE</button>
+                    <button class="menu-btn ally-diff-btn" data-diff="brutal" style="color:#ff0054;border-color:rgba(255,0,84,0.4);">BRUTAL</button>
+                  </div>
+                </div>
+
+                <div class="lobby-group">
+                  <label class="group-label">HOSTILE AI SKILL (ENEMIES)</label>
+                  <div class="button-group grid-4-pills">
+                    <button class="menu-btn enemy-diff-btn" data-diff="easy">CADET</button>
+                    <button class="menu-btn enemy-diff-btn active" data-diff="medium">VETERAN</button>
+                    <button class="menu-btn enemy-diff-btn" data-diff="hard">HARDCORE</button>
+                    <button class="menu-btn enemy-diff-btn" data-diff="brutal" style="color:#ff0054;border-color:rgba(255,0,84,0.4);">BRUTAL</button>
+                  </div>
+                </div>
+
+                <div class="lobby-group">
+                  <label class="group-label">PLATFORM RIGIDITY</label>
+                  <div class="button-group grid-2-pills">
+                    <button class="menu-btn passability-btn active" data-passability="permeable" title="Permeable grates allow jump-through from below and drop-down">
+                      PERMEABLE (ONE-WAY)
+                    </button>
+                    <button class="menu-btn passability-btn" data-passability="solid" title="All platforms act as 100% solid walls and floors">
+                      FULL SOLID (RIGID)
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Right Panel: Visual Deployment & Active Loadout -->
+              <div class="lobby-col lobby-deploy-col">
+                <!-- Arena Selector -->
+                <div class="lobby-group">
+                  <label class="group-label">DEPLOYMENT THEATER</label>
+                  <div class="map-cards-compact-grid">
+                    <button class="map-card-pill active" data-map="citadel">
+                      <div class="map-thumb-preview thumb-citadel">
+                        <span class="thumb-badge">1X FORTRESS</span>
+                      </div>
+                      <div class="map-text">
+                        <strong>VALKYRIE CITADEL</strong>
+                        <small>Standard Vault (2.4km)</small>
+                      </div>
+                    </button>
+                    <button class="map-card-pill" data-map="jungle">
+                      <div class="map-thumb-preview thumb-jungle">
+                        <span class="thumb-badge" style="background:#10b981;color:#fff;border-color:#34d399;">3X GIANT</span>
+                      </div>
+                      <div class="map-text">
+                        <strong>VERDANT JUNGLE</strong>
+                        <small>Massive Canopy (7.2km)</small>
+                      </div>
+                    </button>
+                    <button class="map-card-pill" data-map="desert">
+                      <div class="map-thumb-preview thumb-desert">
+                        <span class="thumb-badge" style="background:#d97706;color:#fff;border-color:#fbbf24;">3X GIANT</span>
+                      </div>
+                      <div class="map-text">
+                        <strong>SANDSTONE CANYON</strong>
+                        <small>Vast Desert War (7.2km)</small>
+                      </div>
+                    </button>
+                    <button class="map-card-pill" data-map="arctic">
+                      <div class="map-thumb-preview thumb-arctic">
+                        <span class="thumb-badge" style="background:#0284c7;color:#fff;border-color:#38bdf8;">0.5X CQB</span>
+                      </div>
+                      <div class="map-text">
+                        <strong>ARCTIC BASTION</strong>
+                        <small>Tight Ice Station (1.2km)</small>
+                      </div>
+                    </button>
+                    <button class="map-card-pill" data-map="docks">
+                      <div class="map-thumb-preview thumb-docks">
+                        <span class="thumb-badge">1X HARBOR</span>
+                      </div>
+                      <div class="map-text">
+                        <strong>HARBOR DOCKS</strong>
+                        <small>Standard Port (2.4km)</small>
+                      </div>
+                    </button>
+                    <button class="map-card-pill" data-map="neon">
+                      <div class="map-thumb-preview thumb-neon">
+                        <span class="thumb-badge" style="background:#be185d;color:#fff;border-color:#f472b6;">0.5X CQB</span>
+                      </div>
+                      <div class="map-text">
+                        <strong>NEON TERMINAL</strong>
+                        <small>Fast Maglev Hub (1.2km)</small>
+                      </div>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Active Loadout Tile with Customize Button -->
+                <div class="lobby-group">
+                  <div class="group-header-row">
+                    <label class="group-label">ACTIVE LOADOUT</label>
+                    <button id="open-arsenal-btn" class="customize-arsenal-btn" type="button">
+                      <span>CUSTOMIZE ARSENAL</span>
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                      </svg>
+                    </button>
+                  </div>
+
+                  <!-- Active Weapon Preview Tile -->
+                  <div id="equipped-weapon-card" class="equipped-weapon-tile" title="Click to customize arsenal">
+                    <div class="wep-preview-left">
+                      <span id="equipped-wep-key" class="wep-key-tag">SLOT [1] DEFAULT</span>
+                      <h4 id="equipped-wep-name" class="wep-name">AR-74 VALKYRIE</h4>
+                      <p id="equipped-wep-type" class="wep-sub">5.56mm Standard Auto • 1x Ricochet</p>
+                    </div>
+                    <div class="wep-preview-right">
+                      <div class="mini-stat-row">
+                        <span class="mini-stat-lbl">DMG</span>
+                        <div class="mini-bar"><div id="stat-bar-dmg" class="bar-inner" style="width: 55%;"></div></div>
+                      </div>
+                      <div class="mini-stat-row">
+                        <span class="mini-stat-lbl">ROF</span>
+                        <div class="mini-bar"><div id="stat-bar-rof" class="bar-inner" style="width: 68%;"></div></div>
+                      </div>
+                      <div class="mini-stat-row">
+                        <span class="mini-stat-lbl">VEL</span>
+                        <div class="mini-bar"><div id="stat-bar-vel" class="bar-inner" style="width: 78%;"></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Footer Dock: Prominent Full-Width Action Trigger -->
+            <div class="warroom-footer">
+              <div class="warroom-status">
+                <span class="status-indicator"></span>
+                <span>SYSTEM READY • CTF PROTOCOL ENGAGED</span>
+              </div>
+              <button id="start-btn" class="cta-button warroom-launch-btn pulse-button">
+                <span class="btn-text">DEPLOY TO COMBAT [ENTER]</span>
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                   <polygon points="5 3 19 12 5 21 5 3"></polygon>
                 </svg>
-              </a>
-              <a href="https://github.com/bambadooma-star/modern-jetstrike-2d" target="_blank" rel="noopener noreferrer" class="hero-sec-cta" title="View Source & Architecture on GitHub">
-                <svg class="gh-icon" viewBox="0 0 16 16" width="16" height="16" fill="currentColor">
-                  <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
-                </svg>
-                <span>VIEW ON GITHUB</span>
-              </a>
-            </div>
-
-            <!-- Quick Match Modes Chips -->
-            <div class="quick-launch-grid">
-              <a href="./play.html" class="quick-chip">1v1 DUEL ARENA</a>
-              <a href="./play.html" class="quick-chip">2v2 TACTICAL SKIRMISH</a>
-              <a href="./play.html" class="quick-chip">3v3 SQUAD WARFARE</a>
-              <a href="./play.html" class="quick-chip">4v4 FULL CHAOS</a>
-              <a href="./play.html?mode=cvc" class="quick-chip cvc-chip">AI VS AI SIMULATION</a>
+              </button>
             </div>
           </div>
+        </div>
 
-          <!-- Hero Visual Proof: Animated Combat Teaser Frame -->
-          <div class="hero-right">
-            <div class="hero-terminal-card glass-panel">
-              <div class="terminal-bar">
-                <div class="term-dots">
-                  <span class="dot red"></span>
-                  <span class="dot yellow"></span>
-                  <span class="dot green"></span>
-                </div>
-                <span class="term-title">TACTICAL RADAR TELEMETRY // 60 FPS LIVE</span>
-                <span class="term-status-badge">ONLINE</span>
+        <!-- Dedicated Settings Modal -->
+        <div id="settings-modal" class="overlay-container" style="display: none;">
+          <div class="modal-card glass-panel settings-modal-card">
+            <div class="modal-header">
+              <div class="modal-title-wrap">
+                <span class="modal-badge">PREFERENCES</span>
+                <h2 class="modal-title">AUDIO & SYSTEM SETTINGS</h2>
               </div>
-              <div class="hero-canvas-wrap">
-                <canvas id="hero-teaser-canvas" width="560" height="340"></canvas>
-                <div class="canvas-hud-overlay">
-                  <div class="hud-stat-pill">
-                    <span class="stat-label">ENGINE:</span>
-                    <span class="stat-val highlight-cyan">CANVAS2D 60FPS</span>
-                  </div>
-                  <div class="hud-stat-pill">
-                    <span class="stat-label">BALLISTICS:</span>
-                    <span class="stat-val">SWEPT CONTINUOUS</span>
-                  </div>
-                  <div class="hud-stat-pill">
-                    <span class="stat-label">AUDIO:</span>
-                    <span class="stat-val">SYNTH WEB AUDIO</span>
-                  </div>
+              <button id="close-settings-btn" class="modal-close-btn" type="button" aria-label="Close Settings">✕</button>
+            </div>
+            <div class="modal-body">
+              <div class="setting-item-row">
+                <div class="setting-info">
+                  <strong>MASTER SFX VOLUME</strong>
+                  <small>Combat weapons, thrusters, explosions, and impacts</small>
+                </div>
+                <div class="setting-ctrl">
+                  <span id="master-volume-val" class="volume-num">80%</span>
+                  <input type="range" id="master-volume-slider" min="0" max="1" step="0.05" value="0.8" class="vol-slider" />
                 </div>
               </div>
+              <div class="setting-item-row">
+                <div class="setting-info">
+                  <strong>COMBAT ANNOUNCER VOICE</strong>
+                  <small>Flag captures, killstreaks, and tactical callouts</small>
+                </div>
+                <div class="setting-ctrl">
+                  <span id="voice-volume-val" class="volume-num">90%</span>
+                  <input type="range" id="voice-volume-slider" min="0" max="1" step="0.05" value="0.9" class="vol-slider" />
+                </div>
+              </div>
+              <div class="weapon-compact-card" data-weapon="pistol">
+                <div class="w-card-header">
+                  <span class="w-slot-tag">SEC [Q]</span>
+                  <span class="w-caliber-tag">.45 ACP Tactical</span>
+                </div>
+                <h4 class="w-title">EAGLE-45 PISTOL</h4>
+                <p class="w-type-desc">Combat Sidearm • Semi-Auto Quick Reload</p>
+                <div class="w-specs-row">
+                  <span>DMG: <b>28 HP</b></span>
+                  <span>ROF: <b>6.5 RPS</b></span>
+                  <span>MAG: <b>12</b></span>
+                </div>
+                <button class="menu-btn default-tag" type="button">EQUIP AS DEFAULT</button>
+              </div>
+
+              <div class="weapon-compact-card" data-weapon="knife">
+                <div class="w-card-header">
+                  <span class="w-slot-tag">SEC [Q]</span>
+                  <span class="w-caliber-tag">Aerodynamic Titanium</span>
+                </div>
+                <h4 class="w-title">VIPER THROWING KNIFE</h4>
+                <p class="w-type-desc">Ballistic Blade • Up to 5 Deadly Precision Throws</p>
+                <div class="w-specs-row">
+                  <span>DMG: <b>95 HP</b></span>
+                  <span>ROF: <b>2.0 RPS</b></span>
+                  <span>MAG: <b>5 Uses</b></span>
+                </div>
+                <button class="menu-btn default-tag" type="button">EQUIP AS DEFAULT</button>
+              </div>
+
+              <div class="weapon-compact-card" data-weapon="chainsaw">
+                <div class="w-card-header">
+                  <span class="w-slot-tag">SEC [Q]</span>
+                  <span class="w-caliber-tag">Twin-Stroke 52cc Motor</span>
+                </div>
+                <h4 class="w-title">RIPPER-X CHAINSAW</h4>
+                <p class="w-type-desc">Motorized Melee • Continuous 350 DPS Shredder</p>
+                <div class="w-specs-row">
+                  <span>DMG: <b>18 HP / Tick</b></span>
+                  <span>ROF: <b>22 RPS</b></span>
+                  <span>TANK: <b>75 Fuel</b></span>
+                </div>
+                <button class="menu-btn default-tag" type="button">EQUIP AS DEFAULT</button>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button id="done-settings-btn" class="cta-button secondary" type="button">
+                <span class="btn-text">CONFIRM & CLOSE</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dedicated Controls Manual Modal -->
+        <div id="controls-modal" class="overlay-container" style="display: none;">
+          <div class="modal-card glass-panel controls-modal-card">
+            <div class="modal-header">
+              <div class="modal-title-wrap">
+                <span class="modal-badge">TACTICAL BRIEFING</span>
+                <h2 class="modal-title">COMBAT CONTROLS MANUAL</h2>
+              </div>
+              <button id="close-controls-btn" class="modal-close-btn" type="button" aria-label="Close Controls">✕</button>
+            </div>
+            <div class="modal-body controls-modal-grid">
+              <div class="controls-column">
+                <h3 class="col-heading">KEYBOARD & MOUSE</h3>
+                <div class="control-row"><div class="key-cluster"><kbd>W</kbd> <span class="sep">/</span> <kbd>SPACE</kbd></div><span>Jump / Somersault / Vault</span></div>
+                <div class="control-row"><div class="key-cluster"><kbd>A</kbd> <kbd>D</kbd></div><span>Run Left / Right</span></div>
+                <div class="control-row"><div class="key-cluster"><kbd>X</kbd> <span class="sep">/</span> <kbd>S</kbd></div><span>Prone Lying / Crouch Walk</span></div>
+                <div class="control-row"><div class="key-cluster"><kbd>S</kbd> + <kbd>W</kbd></div><span>Drop Through Grate Floor</span></div>
+                <div class="control-row"><div class="key-cluster"><kbd>SHIFT</kbd> <span class="sep">/</span> <kbd>RMB</kbd></div><span>Jet Boots Thrusters (Boost)</span></div>
+                <div class="control-row"><div class="key-cluster"><kbd>MOUSE</kbd></div><span>360° Continuous Aim & Laser</span></div>
+                <div class="control-row"><div class="key-cluster"><kbd>LMB</kbd></div><span>Fire Equipped Weapon</span></div>
+                <div class="control-row"><div class="key-cluster"><kbd>Q</kbd></div><span>Toggle Secondary Weapon (Pistol / Knife / Chainsaw)</span></div>
+                <div class="control-row"><div class="key-cluster"><kbd>F</kbd></div><span>Throw Carried Flag Forward</span></div>
+                <div class="control-row"><div class="key-cluster"><kbd>E</kbd> <span class="sep">/</span> <kbd>G</kbd></div><span>Hold to Charge Frag Grenade Throw</span></div>
+                <div class="control-row"><div class="key-cluster"><kbd>R</kbd></div><span>Tactical Magazine Reload</span></div>
+                <div class="control-row"><div class="key-cluster"><kbd>1</kbd> - <kbd>4</kbd></div><span>Squad Radio Voice Orders (Announcer)</span></div>
+                <div class="control-row"><div class="key-cluster"><kbd>K</kbd></div><span>Self-Destruct / Force Respawn (15s)</span></div>
+              </div>
+              <div class="controls-column">
+                <h3 class="col-heading">MOBILE DUAL-STICK</h3>
+                <div class="control-row"><div class="key-cluster"><span class="touch-pill">LEFT STICK</span></div><span>Run, Jump & Crouch</span></div>
+                <div class="control-row"><div class="key-cluster"><span class="touch-pill">RIGHT STICK</span></div><span>360° Drag-to-Aim & Auto-Fire</span></div>
+                <div class="control-row"><div class="key-cluster"><span class="touch-pill cyan">🚀 BOOST</span></div><span>Jet Flight & Mid-Air Somersault</span></div>
+                <div class="control-row"><div class="key-cluster"><span class="touch-pill">⬆️ JUMP</span></div><span>Dedicated Vault Button</span></div>
+                <div class="control-row"><div class="key-cluster"><span class="touch-pill">🧎 PRONE</span></div><span>Toggle Prone Profile</span></div>
+                <div class="control-row"><div class="key-cluster"><span class="touch-pill amber">💣 GRENADE</span></div><span>Charge & Throw Explosive</span></div>
+                <div class="control-row"><div class="key-cluster"><span class="touch-pill">🔄 RELOAD</span></div><span>Insert Fresh Magazine</span></div>
+                <div class="control-row"><div class="key-cluster"><span class="touch-pill purple">🔀 WEAPON</span></div><span>Cycle Through All Firearms</span></div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button id="done-controls-btn" class="cta-button secondary" type="button">
+                <span class="btn-text">CLOSE MANUAL</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dedicated Arsenal Customizer Modal -->
+        <div id="arsenal-modal" class="overlay-container" style="display: none;">
+          <div class="modal-card glass-panel arsenal-modal-card">
+            <div class="modal-header">
+              <div class="modal-title-wrap">
+                <span class="modal-badge">MILITARY ARSENAL</span>
+                <h2 class="modal-title">CUSTOMIZE STARTING WEAPON</h2>
+              </div>
+              <button id="close-arsenal-btn" class="modal-close-btn" type="button" aria-label="Close Arsenal">✕</button>
+            </div>
+            <div class="modal-body arsenal-modal-grid">
+              <!-- 6 Weapon Compact Cards -->
+              <div class="weapon-compact-card active" data-weapon="assault">
+                <div class="w-card-header">
+                  <span class="w-slot-tag">SLOT [1]</span>
+                  <span class="w-caliber-tag">5.56x45mm NATO</span>
+                </div>
+                <h4 class="w-title">AR-74 VALKYRIE</h4>
+                <p class="w-type-desc">Auto Rifle • 1x Terrain Ricochet</p>
+                <div class="w-specs-row">
+                  <span>DMG: <b>24 HP</b></span>
+                  <span>ROF: <b>10 RPS</b></span>
+                  <span>MAG: <b>30</b></span>
+                </div>
+                <button class="menu-btn default-tag" type="button">✓ EQUIPPED DEFAULT</button>
+              </div>
+
+              <div class="weapon-compact-card" data-weapon="shotgun">
+                <div class="w-card-header">
+                  <span class="w-slot-tag">SLOT [2]</span>
+                  <span class="w-caliber-tag">12-Gauge 00 Buck</span>
+                </div>
+                <h4 class="w-title">SPAS-14 BREACHER</h4>
+                <p class="w-type-desc">Combat Shotgun • 7-Pellet Cone & Shockwave</p>
+                <div class="w-specs-row">
+                  <span>DMG: <b>105 HP</b></span>
+                  <span>ROF: <b>1.4 RPS</b></span>
+                  <span>MAG: <b>8</b></span>
+                </div>
+                <button class="menu-btn default-tag" type="button">EQUIP AS DEFAULT</button>
+              </div>
+
+              <div class="weapon-compact-card" data-weapon="sniper">
+                <div class="w-card-header">
+                  <span class="w-slot-tag">SLOT [3]</span>
+                  <span class="w-caliber-tag">.50 BMG Anti-Material</span>
+                </div>
+                <h4 class="w-title">.50 CAL HAWK</h4>
+                <p class="w-type-desc">Sniper Rifle • Laser Sight & Wall Penetration</p>
+                <div class="w-specs-row">
+                  <span>DMG: <b>85 HP</b></span>
+                  <span>ROF: <b>0.8 RPS</b></span>
+                  <span>MAG: <b>5</b></span>
+                </div>
+                <button class="menu-btn default-tag" type="button">EQUIP AS DEFAULT</button>
+              </div>
+
+              <div class="weapon-compact-card" data-weapon="rocket">
+                <div class="w-card-header">
+                  <span class="w-slot-tag">SLOT [4]</span>
+                  <span class="w-caliber-tag">85mm High Explosive</span>
+                </div>
+                <h4 class="w-title">RPG-7 HYDRA</h4>
+                <p class="w-type-desc">Rocket Launcher • Area Blast & Rocket Jump</p>
+                <div class="w-specs-row">
+                  <span>DMG: <b>110 HP</b></span>
+                  <span>ROF: <b>0.75 RPS</b></span>
+                  <span>MAG: <b>1</b></span>
+                </div>
+                <button class="menu-btn default-tag" type="button">EQUIP AS DEFAULT</button>
+              </div>
+
+              <div class="weapon-compact-card" data-weapon="smg">
+                <div class="w-card-header">
+                  <span class="w-slot-tag">SLOT [5]</span>
+                  <span class="w-caliber-tag">9x19mm Parabellum</span>
+                </div>
+                <h4 class="w-title">MP-9 STINGER</h4>
+                <p class="w-type-desc">Submachine Gun • 16 RPS Double Ricochet</p>
+                <div class="w-specs-row">
+                  <span>DMG: <b>14 HP</b></span>
+                  <span>ROF: <b>16 RPS</b></span>
+                  <span>MAG: <b>32</b></span>
+                </div>
+                <button class="menu-btn default-tag" type="button">EQUIP AS DEFAULT</button>
+              </div>
+
+              <div class="weapon-compact-card" data-weapon="flamethrower">
+                <div class="w-card-header">
+                  <span class="w-slot-tag">SLOT [6]</span>
+                  <span class="w-caliber-tag">Napalm Thermal Cell</span>
+                </div>
+                <h4 class="w-title">IGNIS-X VULCAN</h4>
+                <p class="w-type-desc">Flamethrower • Thermal Arc & Burn DoT</p>
+                <div class="w-specs-row">
+                  <span>DMG: <b>Burn DoT</b></span>
+                  <span>ROF: <b>Continuous</b></span>
+                  <span>MAG: <b>100</b></span>
+                </div>
+                <button class="menu-btn default-tag" type="button">EQUIP AS DEFAULT</button>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button id="done-arsenal-btn" class="cta-button secondary" type="button">
+                <span class="btn-text">CONFIRM LOADOUT</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Main Menu Return Confirmation / Pause Modal -->
+        <div id="leave-modal" class="overlay-container" style="display: none;">
+          <div class="modal-card glass-panel warning-card">
+            <div class="badge-tag warning">MATCH PAUSED</div>
+            <h2 class="modal-title text-warning">RETURN TO MAIN MENU?</h2>
+            <p class="modal-subtitle">The match is paused. Returning to main menu will discard current match progress and K/D stats.</p>
+
+            <div class="modal-actions">
+              <button id="confirm-leave-btn" class="cta-button danger">
+                <span class="btn-text">YES, RETURN TO MENU</span>
+              </button>
+              <button id="pause-self-destruct-btn" class="cta-button" style="background: rgba(255, 0, 84, 0.22); border: 1.5px solid #ff0054; color: #ff0054;">
+                <span class="btn-text">💀 FORCE RESPAWN [15s]</span>
+              </button>
+              <button id="cancel-leave-btn" class="cta-button secondary">
+                <span class="btn-text">RESUME BATTLE [ESC]</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Game Over Modal -->
+        <div id="game-over-modal" class="overlay-container" style="display: none;">
+          <div class="modal-card glass-panel">
+            <h2 id="game-over-title" class="modal-title">VICTORY</h2>
+            <p id="game-over-subtitle" class="modal-subtitle">The Blue team captured 5 flags and claimed victory!</p>
+
+            <div id="game-over-score" class="score-display"></div>
+            <div id="game-over-rewards"></div>
+            <div id="game-over-stats" class="stats-summary"></div>
+
+            <div class="modal-actions">
+              <button id="play-again-btn" class="cta-button">
+                <span class="btn-text">PLAY AGAIN</span>
+              </button>
+              <button id="game-over-menu-btn" class="cta-button secondary">
+                <span class="btn-text">MAIN MENU</span>
+              </button>
             </div>
           </div>
         </div>
       </section>
+    </div>
 
-      <!-- SECTION 1: RETRO SOLDAT-STYLE PHYSICS -->
-      <section id="physics" class="portal-section">
-        <div class="section-inner">
-          <div class="section-header">
-            <span class="section-tag">ENGINE ARCHITECTURE</span>
-            <h2 class="section-title">Retro Soldat-Style Physics</h2>
-            <p class="section-desc">Engineered for momentum conservation, 360° acrobatic aerial somersaults, swept continuous collision, and tactical terrain elasticity.</p>
-          </div>
-
-          <div class="features-grid">
-            <div class="feature-box">
-              <div class="feature-icon-badge">
-                <!-- Tactical Jet SVG -->
-                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#00f5d4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <polygon points="12 2 19 21 12 17 5 21 12 2"></polygon>
-                </svg>
-              </div>
-              <h3>Jet Boots 360° Flight</h3>
-              <p>Burn thruster propellant with Right-Click or Shift to glide across chasms, out-maneuver heavy artillery, and execute Soldat-style somersaults mid-air.</p>
-            </div>
-
-            <div class="feature-box">
-              <div class="feature-icon-badge">
-                <!-- Fortress Bunker SVG -->
-                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#00f5d4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M3 21h18M3 10h18M5 10V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v5M10 21v-4a2 2 0 0 1 2-2h0a2 2 0 0 1 2 2v4"></path>
-                </svg>
-              </div>
-              <h3>Living Dynamic Arenas</h3>
-              <p>Combat across 6 diverse biomes including subterranean fortresses, tropical rainforests, sandstone canyons, arctic bastions, and industrial rainy harbors.</p>
-            </div>
-
-            <div class="feature-box">
-              <div class="feature-icon-badge">
-                <!-- Friction Wave SVG -->
-                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#00f5d4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M2 12h20M7 8l5 4-5 4M13 8l5 4-5 4"></path>
-                </svg>
-              </div>
-              <h3>Rigid Physical Crates</h3>
-              <p>Zero static lines. Health and grenade crates are rigid physics bodies that tumble, slide, and react dynamically to bullet impact and explosion shockwaves.</p>
-            </div>
-
-            <div class="feature-box">
-              <div class="feature-icon-badge">
-                <!-- Grenade SVG -->
-                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#00f5d4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <circle cx="12" cy="13" r="8"></circle>
-                  <path d="M12 5V2M10 2h4M9 8h6"></path>
-                </svg>
-              </div>
-              <h3>Charged Grenades & Bounces</h3>
-              <p>Hold [E] to charge throw power from close-range toss to maximum distance artillery strikes. Elastic grenade physics ricochet off terrain with timed fuses.</p>
-            </div>
-
-            <div class="feature-box">
-              <div class="feature-icon-badge">
-                <!-- Target Reticle SVG -->
-                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#00f5d4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <circle cx="12" cy="12" r="10"></circle>
-                  <line x1="22" y1="12" x2="18" y2="12"></line>
-                  <line x1="6" y1="12" x2="2" y2="12"></line>
-                  <line x1="12" y1="6" x2="12" y2="2"></line>
-                  <line x1="12" y1="22" x2="12" y2="18"></line>
-                </svg>
-              </div>
-              <h3>Continuous Swept Ballistics</h3>
-              <p>Liang-Barsky swept continuous collision prevents bullet tunnelling through walls. Features authentic velocity, gravity arcs, and steel ricochets.</p>
-            </div>
-
-            <div class="feature-box">
-              <div class="feature-icon-badge">
-                <!-- Neural Bot AI SVG -->
-                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#00f5d4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <rect x="3" y="11" width="18" height="10" rx="2"></rect>
-                  <circle cx="12" cy="5" r="2"></circle>
-                  <path d="M12 7v4M8 15h.01M16 15h.01"></path>
-                </svg>
-              </div>
-              <h3>Tactical Squad Bot AI</h3>
-              <p>Autonomous bots that capture flags, escort carriers, navigate navmesh waypoints, vault obstacles, search for medkits, and engage in tactical AI vs AI wars.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- SECTION 2: TACTICAL LOADOUT & BALLISTICS -->
-      <section id="arsenal" class="portal-section alternate-bg">
-        <div class="section-inner">
-          <div class="section-header">
-            <span class="section-tag">MILITARY SPECIFICATIONS</span>
-            <h2 class="section-title">Tactical Loadout & Ballistics</h2>
-            <p class="section-desc">6 specialized combat firearms featuring distinct muzzle velocities, recoil impulses, magazine capacities, and tactical ballistics.</p>
-          </div>
-
-          <div class="arsenal-cards-grid">
-            <!-- Weapon 1: Assault -->
-            <div class="arsenal-showcase-card">
-              <div class="card-top">
-                <span class="caliber-tag">5.56x45mm NATO</span>
-                <span class="slot-badge">KEY [1]</span>
-              </div>
-              <div class="card-logo-display">
-                <svg class="showcase-svg" viewBox="0 0 60 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M4 14 L12 14 L15 12 L22 12 L22 16 L14 16 L10 20 L4 20 Z" fill="#00f5d4" opacity="0.85" />
-                  <path d="M22 11 L54 11 L54 13 L58 13 L58 14 L54 14 L54 15 L22 15 Z" fill="#ffffff" />
-                  <rect x="32" y="8" width="16" height="3" rx="1" fill="#00f5d4" />
-                  <path d="M28 15 L32 23 L26 23 L24 15 Z" fill="#00f5d4" opacity="0.9" />
-                  <path d="M19 16 L21 22 L17 22 L16 16 Z" fill="#ffffff" opacity="0.75" />
-                </svg>
-              </div>
-              <h3 class="wep-title">AR-74 VALKYRIE</h3>
-              <p class="wep-type">Assault Rifle • 1x Ricochet</p>
-              <div class="stat-bars-container">
-                <div class="stat-bar-row">
-                  <span class="stat-name">DAMAGE</span>
-                  <div class="bar-track"><div class="bar-fill" style="width: 55%;"></div></div>
-                  <span class="stat-num">24 HP</span>
-                </div>
-                <div class="stat-bar-row">
-                  <span class="stat-name">FIRE RATE</span>
-                  <div class="bar-track"><div class="bar-fill" style="width: 68%;"></div></div>
-                  <span class="stat-num">10 RPS</span>
-                </div>
-                <div class="stat-bar-row">
-                  <span class="stat-name">VELOCITY</span>
-                  <div class="bar-track"><div class="bar-fill" style="width: 78%;"></div></div>
-                  <span class="stat-num">950 m/s</span>
-                </div>
-              </div>
-              <a href="./play.html" class="arsenal-select-btn">SELECT AS DEFAULT</a>
-            </div>
-
-            <!-- Weapon 2: Shotgun -->
-            <div class="arsenal-showcase-card">
-              <div class="card-top">
-                <span class="caliber-tag">12-Gauge 00 Buck</span>
-                <span class="slot-badge">KEY [2]</span>
-              </div>
-              <div class="card-logo-display">
-                <svg class="showcase-svg" viewBox="0 0 60 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M6 14 L14 14 L16 12 L24 12 L24 17 L14 17 L12 21 L6 21 Z" fill="#ffbe0b" opacity="0.85" />
-                  <rect x="24" y="10" width="28" height="6" fill="#ffffff" />
-                  <rect x="28" y="17" width="12" height="4" rx="1" fill="#ffbe0b" />
-                  <rect x="52" y="11" width="4" height="4" fill="#ffbe0b" />
-                </svg>
-              </div>
-              <h3 class="wep-title">SPAS-14 BREACHER</h3>
-              <p class="wep-type">Tactical Shotgun • 7 Pellets</p>
-              <div class="stat-bars-container">
-                <div class="stat-bar-row">
-                  <span class="stat-name">DAMAGE</span>
-                  <div class="bar-track"><div class="bar-fill" style="width: 95%; background: #ffbe0b;"></div></div>
-                  <span class="stat-num">105 HP</span>
-                </div>
-                <div class="stat-bar-row">
-                  <span class="stat-name">FIRE RATE</span>
-                  <div class="bar-track"><div class="bar-fill" style="width: 20%; background: #ffbe0b;"></div></div>
-                  <span class="stat-num">1.4 RPS</span>
-                </div>
-                <div class="stat-bar-row">
-                  <span class="stat-name">VELOCITY</span>
-                  <div class="bar-track"><div class="bar-fill" style="width: 60%; background: #ffbe0b;"></div></div>
-                  <span class="stat-num">720 m/s</span>
-                </div>
-              </div>
-              <a href="./play.html" class="arsenal-select-btn">SELECT AS DEFAULT</a>
-            </div>
-
-            <!-- Weapon 3: Sniper -->
-            <div class="arsenal-showcase-card">
-              <div class="card-top">
-                <span class="caliber-tag">.50 BMG Anti-Material</span>
-                <span class="slot-badge">KEY [3]</span>
-              </div>
-              <div class="card-logo-display">
-                <svg class="showcase-svg" viewBox="0 0 60 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <rect x="18" y="11" width="38" height="3" fill="#ffffff" />
-                  <path d="M4 13 L18 13 L18 16 L12 16 L8 21 L3 21 L5 15 L4 15 Z" fill="#70d6ff" opacity="0.85" />
-                  <rect x="22" y="6" width="22" height="4" rx="1" fill="#70d6ff" />
-                </svg>
-              </div>
-              <h3 class="wep-title">.50 CAL HAWK</h3>
-              <p class="wep-type">Sniper Rifle • Laser Sight</p>
-              <div class="stat-bars-container">
-                <div class="stat-bar-row">
-                  <span class="stat-name">DAMAGE</span>
-                  <div class="bar-track"><div class="bar-fill" style="width: 90%; background: #70d6ff;"></div></div>
-                  <span class="stat-num">85 HP</span>
-                </div>
-                <div class="stat-bar-row">
-                  <span class="stat-name">FIRE RATE</span>
-                  <div class="bar-track"><div class="bar-fill" style="width: 15%; background: #70d6ff;"></div></div>
-                  <span class="stat-num">0.8 RPS</span>
-                </div>
-                <div class="stat-bar-row">
-                  <span class="stat-name">VELOCITY</span>
-                  <div class="bar-track"><div class="bar-fill" style="width: 100%; background: #70d6ff;"></div></div>
-                  <span class="stat-num">1400 m/s</span>
-                </div>
-              </div>
-              <a href="./play.html" class="arsenal-select-btn">SELECT AS DEFAULT</a>
-            </div>
-
-            <!-- Weapon 4: Rocket -->
-            <div class="arsenal-showcase-card">
-              <div class="card-top">
-                <span class="caliber-tag">85mm High Explosive</span>
-                <span class="slot-badge">KEY [4]</span>
-              </div>
-              <div class="card-logo-display">
-                <svg class="showcase-svg" viewBox="0 0 60 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M4 10 L10 12 L10 16 L4 18 Z" fill="#64748b" />
-                  <rect x="10" y="12" width="32" height="4" fill="#94a3b8" />
-                  <path d="M42 11 L48 8 L54 14 L48 20 L42 17 Z" fill="#ff0054" />
-                </svg>
-              </div>
-              <h3 class="wep-title">RPG-7 HYDRA</h3>
-              <p class="wep-type">Rocket Launcher • Area Splash</p>
-              <div class="stat-bars-container">
-                <div class="stat-bar-row">
-                  <span class="stat-name">DAMAGE</span>
-                  <div class="bar-track"><div class="bar-fill" style="width: 100%; background: #ff0054;"></div></div>
-                  <span class="stat-num">110 HP</span>
-                </div>
-                <div class="stat-bar-row">
-                  <span class="stat-name">FIRE RATE</span>
-                  <div class="bar-track"><div class="bar-fill" style="width: 12%; background: #ff0054;"></div></div>
-                  <span class="stat-num">0.75 RPS</span>
-                </div>
-                <div class="stat-bar-row">
-                  <span class="stat-name">VELOCITY</span>
-                  <div class="bar-track"><div class="bar-fill" style="width: 45%; background: #ff0054;"></div></div>
-                  <span class="stat-num">520 m/s</span>
-                </div>
-              </div>
-              <a href="./play.html" class="arsenal-select-btn">SELECT AS DEFAULT</a>
-            </div>
-
-            <!-- Weapon 5: SMG -->
-            <div class="arsenal-showcase-card">
-              <div class="card-top">
-                <span class="caliber-tag">9x19mm Parabellum</span>
-                <span class="slot-badge">KEY [5]</span>
-              </div>
-              <div class="card-logo-display">
-                <svg class="showcase-svg" viewBox="0 0 60 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <rect x="14" y="10" width="26" height="6" rx="1" fill="#ffffff" />
-                  <rect x="18" y="8" width="18" height="2" fill="#b5179e" />
-                  <rect x="22" y="16" width="6" height="8" rx="1" fill="#b5179e" />
-                </svg>
-              </div>
-              <h3 class="wep-title">MP-9 STINGER</h3>
-              <p class="wep-type">Submachine Gun • Double Ricochet</p>
-              <div class="stat-bars-container">
-                <div class="stat-bar-row">
-                  <span class="stat-name">DAMAGE</span>
-                  <div class="bar-track"><div class="bar-fill" style="width: 35%; background: #b5179e;"></div></div>
-                  <span class="stat-num">14 HP</span>
-                </div>
-                <div class="stat-bar-row">
-                  <span class="stat-name">FIRE RATE</span>
-                  <div class="bar-track"><div class="bar-fill" style="width: 100%; background: #b5179e;"></div></div>
-                  <span class="stat-num">16 RPS</span>
-                </div>
-                <div class="stat-bar-row">
-                  <span class="stat-name">VELOCITY</span>
-                  <div class="bar-track"><div class="bar-fill" style="width: 70%; background: #b5179e;"></div></div>
-                  <span class="stat-num">840 m/s</span>
-                </div>
-              </div>
-              <a href="./play.html" class="arsenal-select-btn">SELECT AS DEFAULT</a>
-            </div>
-
-            <!-- Weapon 6: Flamethrower -->
-            <div class="arsenal-showcase-card">
-              <div class="card-top">
-                <span class="caliber-tag">Napalm Thermal Cell</span>
-                <span class="slot-badge">KEY [6]</span>
-              </div>
-              <div class="card-logo-display">
-                <svg class="showcase-svg" viewBox="0 0 60 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <rect x="12" y="11" width="28" height="6" rx="1" fill="#ff4d00" />
-                  <rect x="36" y="8" width="16" height="12" rx="3" fill="#ff8500" opacity="0.8" />
-                  <path d="M4 14 L12 14 L10 20 L4 20 Z" fill="#ffffff" />
-                  <circle cx="52" cy="14" r="3" fill="#ffd100" />
-                </svg>
-              </div>
-              <h3 class="wep-title">IGNIS-X VULCAN</h3>
-              <p class="wep-type">Flamethrower • Burn DoT Effect</p>
-              <div class="stat-bars-container">
-                <div class="stat-bar-row">
-                  <span class="stat-name">DAMAGE</span>
-                  <div class="bar-track"><div class="bar-fill" style="width: 80%; background: #ff4d00;"></div></div>
-                  <span class="stat-num">Burn DoT</span>
-                </div>
-                <div class="stat-bar-row">
-                  <span class="stat-name">FIRE RATE</span>
-                  <div class="bar-track"><div class="bar-fill" style="width: 90%; background: #ff4d00;"></div></div>
-                  <span class="stat-num">Continuous</span>
-                </div>
-                <div class="stat-bar-row">
-                  <span class="stat-name">VELOCITY</span>
-                  <div class="bar-track"><div class="bar-fill" style="width: 40%; background: #ff4d00;"></div></div>
-                  <span class="stat-num">Fluid Arc</span>
-                </div>
-              </div>
-              <a href="./play.html" class="arsenal-select-btn">SELECT AS DEFAULT</a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- SECTION 3: PLAY INSTANTLY IN BROWSER (ZERO INSTALL) -->
-      <section id="play-now" class="portal-section">
-        <div class="section-inner">
-          <div class="section-header">
-            <span class="section-tag">INSTANT DEPLOYMENT</span>
-            <h2 class="section-title">Play Instantly in Browser (Zero Install)</h2>
-            <p class="section-desc">No downloads, no client install, no plugins. 100% pure web standards running at native 60 FPS.</p>
-          </div>
-
-          <div class="play-banner-card glass-panel">
-            <div class="play-banner-left">
-              <span class="banner-badge">CTF ARENA V2.4 READY</span>
-              <h3 class="banner-title">READY FOR COMBAT DEPLOYMENT?</h3>
-              <p class="banner-desc">
-                Select your squad size, configure tactical AI threat difficulty, pick your arena biome, and take command in under 2 seconds.
-              </p>
-              <div class="banner-buttons">
-                <a href="./play.html" class="hero-play-cta">
-                  <span>LAUNCH MODERN JETSTRIKE 2D</span>
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
-                  </svg>
-                </a>
-              </div>
-            </div>
-            <div class="play-banner-right">
-              <div class="tech-spec-badge">
-                <span class="tech-icon">⚡</span>
-                <div class="tech-text">
-                  <strong>ZERO INSTALLATION</strong>
-                  <small>Loads instantaneously via CDN</small>
-                </div>
-              </div>
-              <div class="tech-spec-badge">
-                <span class="tech-icon">🎮</span>
-                <div class="tech-text">
-                  <strong>DUAL-STICK MOBILE SUPPORT</strong>
-                  <small>Seamless phone & tablet controls</small>
-                </div>
-              </div>
-              <div class="tech-spec-badge">
-                <span class="tech-icon">🛡️</span>
-                <div class="tech-text">
-                  <strong>PRIVATE & SECURE</strong>
-                  <small>Client-side simulation & domain locked</small>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- SECTION 4: CONTROLS BRIEFING -->
-      <section id="controls" class="portal-section alternate-bg">
-        <div class="section-inner">
-          <div class="section-header">
-            <span class="section-tag">TACTICAL MANUAL</span>
-            <h2 class="section-title">Combat Controls</h2>
-            <p class="section-desc">Streamlined keybinds for desktop precision and dual-stick touch controls for mobile landscape warfare.</p>
-          </div>
-
-          <div class="controls-master-grid">
-            <!-- Desktop Controls -->
-            <div class="control-cat-box glass-panel">
-              <div class="control-box-header">
-                <span class="platform-badge">DESKTOP</span>
-                <h3>Keyboard & Mouse Setup</h3>
-              </div>
-              <div class="cat-list">
-                <div class="control-row">
-                  <div class="key-cluster"><kbd>W</kbd> <span class="sep">/</span> <kbd>SPACE</kbd></div>
-                  <span>Jump / Vault Obstacles</span>
-                </div>
-                <div class="control-row">
-                  <div class="key-cluster"><kbd>A</kbd> <kbd>D</kbd></div>
-                  <span>Run Left & Right</span>
-                </div>
-                <div class="control-row">
-                  <div class="key-cluster"><kbd>X</kbd> <span class="sep">/</span> <kbd>S</kbd></div>
-                  <span>Prone Lying / Crouch Walk</span>
-                </div>
-                <div class="control-row">
-                  <div class="key-cluster"><kbd>S</kbd> + <kbd>W</kbd></div>
-                  <span>Drop Through Permeable Grates</span>
-                </div>
-                <div class="control-row">
-                  <div class="key-cluster"><kbd>SHIFT</kbd> <span class="sep">/</span> <kbd>RMB</kbd></div>
-                  <span>Jet Boots Thrusters (Boost + Somersault)</span>
-                </div>
-                <div class="control-row">
-                  <div class="key-cluster"><kbd>MOUSE</kbd></div>
-                  <span>360° Weapon Aim & Laser Sight</span>
-                </div>
-                <div class="control-row">
-                  <div class="key-cluster"><kbd>LMB</kbd></div>
-                  <span>Fire Equipped Weapon</span>
-                </div>
-                <div class="control-row">
-                  <div class="key-cluster"><kbd>E</kbd> <span class="sep">/</span> <kbd>G</kbd></div>
-                  <span>Hold to Charge Frag Grenade Throw</span>
-                </div>
-                <div class="control-row">
-                  <div class="key-cluster"><kbd>R</kbd></div>
-                  <span>Tactical Magazine Reload</span>
-                </div>
-                <div class="control-row">
-                  <div class="key-cluster"><kbd>1</kbd> - <kbd>6</kbd></div>
-                  <span>Switch Weapons / Wheel Cycle</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Mobile Dual-Stick Controls -->
-            <div class="control-cat-box glass-panel">
-              <div class="control-box-header">
-                <span class="platform-badge mobile">MOBILE</span>
-                <h3>Dual-Stick Landscape Layout</h3>
-              </div>
-              <div class="cat-list">
-                <div class="control-row">
-                  <div class="key-cluster"><span class="touch-pill">LEFT THUMBSTICK</span></div>
-                  <span>360° Ground Movement, Jump Up & Drop Down</span>
-                </div>
-                <div class="control-row">
-                  <div class="key-cluster"><span class="touch-pill">RIGHT FIRE STICK</span></div>
-                  <span>360° Drag-to-Aim & Continuous Auto-Fire</span>
-                </div>
-                <div class="control-row">
-                  <div class="key-cluster"><span class="touch-pill cyan">🚀 BOOST</span></div>
-                  <span>Jet Boots Flight & Backflip Somersault</span>
-                </div>
-                <div class="control-row">
-                  <div class="key-cluster"><span class="touch-pill">⬆️ JUMP</span></div>
-                  <span>Dedicated Jump & Vault Button</span>
-                </div>
-                <div class="control-row">
-                  <div class="key-cluster"><span class="touch-pill">🧎 PRONE</span></div>
-                  <span>Toggle Prone Profile Stance</span>
-                </div>
-                <div class="control-row">
-                  <div class="key-cluster"><span class="touch-pill amber">💣 GRENADE</span></div>
-                  <span>Hold to Charge Distance, Release to Throw</span>
-                </div>
-                <div class="control-row">
-                  <div class="key-cluster"><span class="touch-pill">🔄 RELOAD</span></div>
-                  <span>Insert Fresh Magazine</span>
-                </div>
-                <div class="control-row">
-                  <div class="key-cluster"><span class="touch-pill purple">🔀 WEAPON</span></div>
-                  <span>Quick Cycle Through All 6 Firearms</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <!-- Sleek Military-Grade Footer -->
-    <footer class="site-footer">
-      <div class="footer-container">
-        <div class="footer-brand-col">
-          <img src="./modern-jetstrike-logo.svg" alt="Modern Jetstrike 2D" class="header-logo-img" style="height: 40px; margin-bottom: 12px;" />
-          <p class="footer-subtext">Competitive 2D aerial combat engine built with HTML5 Canvas, swept raycast ballistics, and Web Audio API.</p>
-          <div class="system-status-indicator">
-            <span class="status-pulse-dot"></span>
-            <span>SYSTEM OPERATIONAL • PRODUCTION V2.4</span>
-          </div>
-        </div>
-
-        <div class="footer-links-col">
-          <h4>ARENA SECTORS</h4>
-          <div class="links-col">
-            <a href="./play.html">Launch Battle Arena</a>
-            <a href="./play.html?mode=cvc">AI vs AI Simulation</a>
-            <a href="#physics">Physics Engine</a>
-            <a href="#arsenal">Weapons Specifications</a>
-          </div>
-        </div>
-
-        <div class="footer-links-col">
-          <h4>REPOSITORY & DOCS</h4>
-          <div class="links-col">
-            <a href="https://github.com/bambadooma-star/modern-jetstrike-2d" target="_blank" rel="noopener noreferrer">Public GitHub Portal</a>
-            <a href="https://github.com/bambadooma-star/modern-jetstrike-2d-source" target="_blank" rel="noopener noreferrer">Source Repository</a>
-            <a href="#controls">Combat Controls Manual</a>
-          </div>
-        </div>
-      </div>
-      <div class="footer-bottom-bar">
-        <span>&copy; 2026 Modern Jetstrike 2D. Free & Open Source Web Game.</span>
-      </div>
-    </footer>
-
-    <!-- Interactive Hero Canvas Animation Script -->
-    <script>
-      (function() {
-        const canvas = document.getElementById('hero-teaser-canvas');
-        if (!canvas) return;
-        const ctx = canvas.getContext('2d');
-        if (!ctx) return;
-
-        let time = 0;
-        const particles = [];
-        for (let i = 0; i < 30; i++) {
-          particles.push({
-            x: Math.random() * canvas.width,
-            y: Math.random() * canvas.height,
-            vx: (Math.random() - 0.5) * 1.5,
-            vy: (Math.random() - 0.5) * 1.5,
-            size: Math.random() * 2 + 1,
-            alpha: Math.random() * 0.6 + 0.2
-          });
-        }
-
-        function render() {
-          time += 0.025;
-          ctx.fillStyle = '#070b14';
-          ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-          // 1. Grid background
-          ctx.strokeStyle = 'rgba(0, 245, 212, 0.06)';
-          ctx.lineWidth = 1;
-          for (let x = 0; x < canvas.width; x += 35) {
-            ctx.beginPath();
-            ctx.moveTo(x, 0);
-            ctx.lineTo(x, canvas.height);
-            ctx.stroke();
-          }
-          for (let y = 0; y < canvas.height; y += 35) {
-            ctx.beginPath();
-            ctx.moveTo(0, y);
-            ctx.lineTo(canvas.width, y);
-            ctx.stroke();
-          }
-
-          // 2. Rotating Radar Sweep in top corner
-          const rx = canvas.width - 70;
-          const ry = 70;
-          const rRadius = 45;
-          ctx.strokeStyle = 'rgba(0, 245, 212, 0.2)';
-          ctx.beginPath();
-          ctx.arc(rx, ry, rRadius, 0, Math.PI * 2);
-          ctx.stroke();
-          ctx.beginPath();
-          ctx.arc(rx, ry, rRadius * 0.5, 0, Math.PI * 2);
-          ctx.stroke();
-
-          const sweepAngle = time * 2;
-          ctx.fillStyle = 'rgba(0, 245, 212, 0.12)';
-          ctx.beginPath();
-          ctx.moveTo(rx, ry);
-          ctx.arc(rx, ry, rRadius, sweepAngle, sweepAngle + 0.5);
-          ctx.closePath();
-          ctx.fill();
-
-          // Radar blips
-          const blip1Alpha = (Math.sin(time * 3) + 1) * 0.4;
-          ctx.fillStyle = `rgba(255, 0, 84, ${blip1Alpha})`;
-          ctx.beginPath();
-          ctx.arc(rx + 18, ry - 14, 3, 0, Math.PI * 2);
-          ctx.fill();
-
-          // 3. Platform silhouettes
-          ctx.fillStyle = 'rgba(30, 41, 59, 0.85)';
-          ctx.fillRect(40, 240, 220, 16);
-          ctx.fillStyle = '#00f5d4';
-          ctx.fillRect(40, 240, 220, 2);
-
-          ctx.fillStyle = 'rgba(30, 41, 59, 0.85)';
-          ctx.fillRect(300, 210, 220, 16);
-          ctx.fillStyle = '#ff0054';
-          ctx.fillRect(300, 210, 220, 2);
-
-          // 4. Flying Soldier (Blue Pilot) with Jet Thrusters
-          const soldierX = 140 + Math.sin(time) * 45;
-          const soldierY = 170 + Math.cos(time * 1.5) * 25;
-
-          // Jet flame trail
-          ctx.fillStyle = '#00f5d4';
-          ctx.shadowColor = '#00f5d4';
-          ctx.shadowBlur = 10;
-          for (let p = 0; p < 3; p++) {
-            ctx.beginPath();
-            ctx.arc(soldierX - 6 + (Math.random() - 0.5) * 4, soldierY + 12 + Math.random() * 8, 2, 0, Math.PI * 2);
-            ctx.fill();
-          }
-          ctx.shadowBlur = 0;
-
-          // Soldier silhouette
-          ctx.fillStyle = '#38bdf8';
-          ctx.beginPath();
-          ctx.arc(soldierX, soldierY - 8, 6, 0, Math.PI * 2);
-          ctx.fill();
-          ctx.fillStyle = '#0f172a';
-          ctx.fillRect(soldierX - 5, soldierY - 2, 10, 14);
-
-          // Gun & Laser Sight
-          const targetX = 390 + Math.sin(time * 2) * 20;
-          const targetY = 185;
-          ctx.strokeStyle = '#ffffff';
-          ctx.lineWidth = 2.5;
-          ctx.beginPath();
-          ctx.moveTo(soldierX, soldierY + 2);
-          ctx.lineTo(soldierX + 14, soldierY + 1);
-          ctx.stroke();
-
-          // Laser sight
-          ctx.strokeStyle = 'rgba(0, 245, 212, 0.35)';
-          ctx.lineWidth = 1;
-          ctx.setLineDash([4, 4]);
-          ctx.beginPath();
-          ctx.moveTo(soldierX + 14, soldierY + 1);
-          ctx.lineTo(targetX, targetY);
-          ctx.stroke();
-          ctx.setLineDash([]);
-
-          // 5. Enemy Soldier (Red Target)
-          ctx.fillStyle = '#f43f5e';
-          ctx.beginPath();
-          ctx.arc(targetX, targetY - 8, 6, 0, Math.PI * 2);
-          ctx.fill();
-          ctx.fillStyle = '#1e1b4b';
-          ctx.fillRect(targetX - 5, targetY - 2, 10, 14);
-
-          // Floating particles
-          for (const pt of particles) {
-            pt.x += pt.vx;
-            pt.y += pt.vy;
-            if (pt.x < 0) pt.x = canvas.width;
-            if (pt.x > canvas.width) pt.x = 0;
-            if (pt.y < 0) pt.y = canvas.height;
-            if (pt.y > canvas.height) pt.y = 0;
-
-            ctx.fillStyle = `rgba(0, 245, 212, ${pt.alpha})`;
-            ctx.fillRect(pt.x, pt.y, pt.size, pt.size);
-          }
-
-          requestAnimationFrame(render);
-        }
-        render();
-      })();
-    </script>
+    <!-- Main Game Script -->
   </body>
 </html>

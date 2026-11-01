@@ -7,24 +7,22 @@
     <meta name="description" content="Play Modern Jetstrike 2D online. Fast-paced 2D tactical combat with jet boots flight, projectile ballistics, 3-tier arena, and intense CTF team matches." />
     <meta name="theme-color" content="#060911" />
     <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
-    <script type="module" crossorigin src="./assets/play-CjPio1Dk.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/style-BB7yL2Ba.css">
+    <script type="module" crossorigin src="./assets/main-mjuyzgRI.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/style-ZzqsInnn.css">
   </head>
   <body class="arena-body">
     <!-- Streamlined Header for Pure Game Arena -->
     <header class="site-header game-arena-header">
       <div class="header-container">
-        <a href="./index.html" class="brand-link" title="Return to Home & Portal">
-          <img src="./modern-jetstrike-logo.svg" alt="Modern Jetstrike 2D" class="header-logo-img" />
-        </a>
+        <div class="brand-link" id="brand-logo-btn" role="button" title="Open Match Menu" style="cursor: pointer;">
+          <img src="./modern-jetstrike-logo.svg" alt="Modern Jetstrike" class="header-logo-img" />
+        </div>
 
         <div class="header-actions">
-          <a href="./index.html" class="header-pill home-link-pill" title="Return to Home / Marketing Portal">
-            <span>🏠 HOME</span>
-          </a>
-          <button id="mute-btn" class="header-pill" title="Mute/Unmute Audio">🔊 SOUND ON</button>
-          <button id="fullscreen-btn" class="header-pill" title="Toggle Fullscreen">⛶ FULLSCREEN</button>
-          <button id="main-menu-btn" class="header-pill danger" title="Pause / Open Match Menu" style="display: none;">⚙️ MENU [ESC]</button>
+          <button id="mute-btn" class="header-pill" title="Mute/Unmute Audio">SOUND ON</button>
+          <button id="fullscreen-btn" class="header-pill" title="Toggle Fullscreen">FULLSCREEN</button>
+          <button id="self-destruct-btn" class="header-pill danger" title="Self-Destruct / Force Respawn [K] (15s Penalty)" style="display: none; color: #ff0054; border-color: rgba(255, 0, 84, 0.45); background: rgba(255, 0, 84, 0.12);">RESPAWN [K]</button>
+          <button id="main-menu-btn" class="header-pill danger" title="Pause / Open Match Menu" style="display: none;">MENU [ESC]</button>
         </div>
       </div>
     </header>
@@ -116,8 +114,7 @@
             <div class="warroom-header">
               <div class="brand-badge-box">
                 <span class="live-status-dot"></span>
-                <h1 class="warroom-title">MODERN JETSTRIKE <span>2D</span></h1>
-                <span class="warroom-tag">TACTICAL LOBBY</span>
+                <h1 class="warroom-title">MODERN <span>JETSTRIKE</span></h1>
               </div>
 
               <!-- Top Right Utilities (Callsign Nickname, Profile, Controls, Settings) -->
@@ -199,56 +196,56 @@
                   <div class="map-cards-compact-grid">
                     <button class="map-card-pill active" data-map="citadel">
                       <div class="map-thumb-preview thumb-citadel">
-                        <span class="thumb-badge">FORTRESS</span>
+                        <span class="thumb-badge">1X FORTRESS</span>
                       </div>
                       <div class="map-text">
                         <strong>VALKYRIE CITADEL</strong>
-                        <small>Subterranean Vault</small>
+                        <small>Standard Vault (2.4km)</small>
                       </div>
                     </button>
                     <button class="map-card-pill" data-map="jungle">
                       <div class="map-thumb-preview thumb-jungle">
-                        <span class="thumb-badge">TROPIC</span>
+                        <span class="thumb-badge" style="background:#10b981;color:#fff;border-color:#34d399;">3X GIANT</span>
                       </div>
                       <div class="map-text">
                         <strong>VERDANT JUNGLE</strong>
-                        <small>Canopy Ruins & Rain</small>
+                        <small>Massive Canopy (7.2km)</small>
                       </div>
                     </button>
                     <button class="map-card-pill" data-map="desert">
                       <div class="map-thumb-preview thumb-desert">
-                        <span class="thumb-badge">CANYON</span>
+                        <span class="thumb-badge" style="background:#d97706;color:#fff;border-color:#fbbf24;">3X GIANT</span>
                       </div>
                       <div class="map-text">
                         <strong>SANDSTONE CANYON</strong>
-                        <small>Scorched Terracotta</small>
+                        <small>Vast Desert War (7.2km)</small>
                       </div>
                     </button>
                     <button class="map-card-pill" data-map="arctic">
                       <div class="map-thumb-preview thumb-arctic">
-                        <span class="thumb-badge">GLACIAL</span>
+                        <span class="thumb-badge" style="background:#0284c7;color:#fff;border-color:#38bdf8;">0.5X CQB</span>
                       </div>
                       <div class="map-text">
                         <strong>ARCTIC BASTION</strong>
-                        <small>Subzero Frost Caves</small>
+                        <small>Tight Ice Station (1.2km)</small>
                       </div>
                     </button>
                     <button class="map-card-pill" data-map="docks">
                       <div class="map-thumb-preview thumb-docks">
-                        <span class="thumb-badge">HARBOR</span>
+                        <span class="thumb-badge">1X HARBOR</span>
                       </div>
                       <div class="map-text">
                         <strong>HARBOR DOCKS</strong>
-                        <small>Industrial Port & Mist</small>
+                        <small>Standard Port (2.4km)</small>
                       </div>
                     </button>
                     <button class="map-card-pill" data-map="neon">
                       <div class="map-thumb-preview thumb-neon">
-                        <span class="thumb-badge">CYBER</span>
+                        <span class="thumb-badge" style="background:#be185d;color:#fff;border-color:#f472b6;">0.5X CQB</span>
                       </div>
                       <div class="map-text">
                         <strong>NEON TERMINAL</strong>
-                        <small>High-Speed Metro Hub</small>
+                        <small>Fast Maglev Hub (1.2km)</small>
                       </div>
                     </button>
                   </div>
@@ -371,6 +368,7 @@
                 <div class="control-row"><div class="key-cluster"><kbd>E</kbd> <span class="sep">/</span> <kbd>G</kbd></div><span>Hold to Charge Frag Grenade Throw</span></div>
                 <div class="control-row"><div class="key-cluster"><kbd>R</kbd></div><span>Tactical Magazine Reload</span></div>
                 <div class="control-row"><div class="key-cluster"><kbd>1</kbd> - <kbd>6</kbd></div><span>Switch Weapon</span></div>
+                <div class="control-row"><div class="key-cluster"><kbd>K</kbd></div><span>Self-Destruct / Force Respawn (15s)</span></div>
               </div>
               <div class="controls-column">
                 <h3 class="col-heading">MOBILE DUAL-STICK</h3>
@@ -513,6 +511,9 @@
               <button id="confirm-leave-btn" class="cta-button danger">
                 <span class="btn-text">YES, RETURN TO MENU</span>
               </button>
+              <button id="pause-self-destruct-btn" class="cta-button" style="background: rgba(255, 0, 84, 0.22); border: 1.5px solid #ff0054; color: #ff0054;">
+                <span class="btn-text">💀 FORCE RESPAWN [15s]</span>
+              </button>
               <button id="cancel-leave-btn" class="cta-button secondary">
                 <span class="btn-text">RESUME BATTLE [ESC]</span>
               </button>
@@ -537,9 +538,6 @@
               <button id="game-over-menu-btn" class="cta-button secondary">
                 <span class="btn-text">MAIN MENU</span>
               </button>
-              <a href="./index.html" class="cta-button tertiary">
-                <span class="btn-text">🏠 HOME PORTAL</span>
-              </a>
             </div>
           </div>
         </div>
